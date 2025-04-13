@@ -92,7 +92,7 @@ const SignIn = () => {
             />
 
             <div className="signin-options">
-              <a href="/reset-password">Forgot Password?</a>
+              <Link to="/reset-password">Reset Passoword?</Link>
             </div>
 
             <Button
