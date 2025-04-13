@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/OverView.css";
+import "../../styles/Overview.css";
 import Frame1 from "../../assets/Fram1.png";
 import Frame2 from "../../assets/Fram2.png";
 import Frame3 from "../../assets/Fram3.png";
