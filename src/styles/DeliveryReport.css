@@ -1,0 +1,139 @@
+.delivery-container {
+  padding: 20px;
+}
+
+.delivery-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.delivery-tabs span {
+  margin-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  color: #a0a0a0;
+}
+
+.delivery-tabs .active {
+  color: #ff914d;
+  border-color: #ff914d;
+}
+
+.download-report-btn {
+  background-color: #ff914d;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.download-report-btn > img {
+  width: 16px;
+  height: auto;
+}
+
+.delivery-table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.delivery-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.delivery-table th {
+  background-color: #ffe0c4;
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.delivery-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.status-delivered {
+  color: green;
+  font-weight: 500;
+}
+
+.status-failed {
+  color: red;
+  font-weight: 500;
+}
+
+.status-mixed {
+  color: #333;
+  font-weight: 500;
+}
+
+.delete-icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.delivery-pagination-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.showing-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-buttons button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.pagination-buttons .active {
+  background-color: #ff914d;
+  color: white;
+  border-color: #ff914d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .delivery-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .download-report-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .delivery-pagination-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

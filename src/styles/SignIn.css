@@ -1,0 +1,375 @@
+.signin-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+.signin-header-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.signin-top-links {
+  font-size: 14px;
+}
+
+.signin-top-links a {
+  color: #ff7a00;
+  font-weight: 500;
+  margin-left: 6px;
+}
+
+/* Left Panel */
+.signin-left {
+  width: 50%;
+  background: url("https://s3-alpha-sig.figma.com/img/bb1c/5d15/db3e133e8b57bf3cecaa89c332f4119e?Expires=1745193600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=dbzGDym~1dB4vJ5y-NXfyjyMw9qgYMIZc6OIBjjB95tYaPDU6g-7CjPnn~NCDHvDOHK~JxWNxW-H4qX6jqJ2auivAHrb8pOOIp4zl9msy5IrajWlSIXE7Dn9j4aBkwjkyQ1AHYDmLLSTpBRsLrl0UsELhza7l5aiQN9CbiGGyfToDnFu2XVd2g8yNOSxwRy~-DHJP41gX9nhdNG214PpORQu8doRRxIVVVdBSASdAzvxNqOeeCQ1z6gTZC0SNEnZGzHeWFTnbFvujGnKXueqtabOUX~d4WrGi46yQ88vzEC8v7cIvMrVRkyYcdkxzQ4Miao~euzvD6Xl1dW6t~PXsQ__")
+    no-repeat center;
+  background-size: cover;
+  padding: 40px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.reachdes {
+  color: black !important;
+}
+
+.signin-logo {
+  width: 150px;
+  height: auto;
+}
+.signin-logo > img {
+  width: 100%;
+  height: 100%;
+}
+.signin-text h2 {
+  font-size: 30px;
+  color: #232121;
+  margin-bottom: 10px;
+}
+
+.signin-text p {
+  font-size: 14px;
+  color: #444;
+  text-align: center;
+  max-width: 300px;
+}
+
+.signin-graphic {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 30px;
+}
+
+/* Right Panel */
+.signin-right {
+  width: 50%;
+  background: #f9fafb;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.signin-header {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 14px;
+}
+
+.signin-header a {
+  color: #ff7a00;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.signin-box {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.signin-box h2 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  color: #232121;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signin-box > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  margin-top: 18px;
+}
+
+/* Regular Input */
+.signin-box .ant-input {
+  height: 42px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+}
+
+.signin-options {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.signin-options a {
+  color: #ff7a00;
+  font-size: 13px;
+}
+.signin-button {
+  width: 100%;
+  height: 45px;
+  font-weight: 500;
+  border-radius: 30px;
+  margin-top: 15px;
+  color: black !important;
+  background-color: #ff7a00 !important;
+}
+.google-button {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 10px;
+  margin-top: 8px;
+  background: #fff;
+}
+
+.google-button img {
+  width: 18px;
+  height: 18px;
+}
+
+.or-separator {
+  text-align: center;
+  margin: 20px 0;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.google-button {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 8px;
+}
+
+.error-alert {
+  background: #f44336;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .signin-left,
+  .signin-right {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .signin-box {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .signin-header-top {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .signin-left {
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    padding: 60px 20px;
+  }
+
+  .signin-logo {
+    width: 120px !important;
+  }
+
+  .signin-text h2 {
+    font-size: 24px;
+  }
+
+  .signin-text p {
+    font-size: 13px;
+    max-width: 260px;
+  }
+
+  .signin-graphic {
+    max-width: 320px;
+    margin-top: 30px;
+  }
+
+  .signin-right {
+    padding: 40px 20px;
+  }
+
+  .signin-box h2 {
+    font-size: 24px;
+  }
+
+  .signin-box label {
+    font-size: 12px;
+  }
+
+  .google-button {
+    font-size: 13px;
+    height: 40px;
+  }
+
+  .signin-button {
+    font-size: 14px;
+  }
+
+  .or-separator {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .signin-container {
+    flex-direction: column;
+  }
+
+  .signin-left {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .signin-right {
+    padding: 20px 16px;
+    width: 100%;
+  }
+  .signin-left {
+    padding: 80px 16px 40px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    min-height: 300px;
+  }
+
+  .signin-left-overlay {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  .signin-logo {
+    width: 80px !important;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 10px;
+  }
+
+  .signin-header-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 16px;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 0;
+    z-index: 3;
+  }
+
+  .signin-text h2 {
+    font-size: 20px;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+  }
+
+  .signin-text p {
+    font-size: 12px;
+    color: #eee;
+    max-width: 280px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  .signin-box {
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+
+  .signin-box h2 {
+    font-size: 24px;
+  }
+
+  .signin-box label {
+    font-size: 13px;
+  }
+
+  .signin-button {
+    font-size: 15px;
+    height: 42px;
+  }
+
+  .google-button {
+    font-size: 13px;
+    height: 40px;
+  }
+
+  .google-button img {
+    width: 16px;
+  }
+
+  .signin-top-links {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+  }
+  .signin-top-links > span {
+    color: white !important;
+  }
+}

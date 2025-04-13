@@ -1,0 +1,158 @@
+.history-wrapper {
+  padding: 24px;
+  background-color: #f9f9f9;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.history-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.history-topup-btn {
+  background-color: #ff7a00;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.history-table-container {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.history-table thead {
+  background-color: #fff3e6;
+  text-align: left;
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-badge.successful {
+  background-color: #e0f7e9;
+  color: #28a745;
+}
+
+.status-badge.failed {
+  background-color: #fbeaea;
+  color: #dc3545;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #f0ad4e;
+}
+
+.history-pagination {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .history-table {
+    font-size: 12px;
+  }
+
+  .history-topup-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .status-badge {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+}
+.history-pagination-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  font-size: 13px;
+  color: #666;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-pagination-text {
+  flex: 1;
+}
+
+.history-pagination-controls {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.page-btn,
+.pagination-arrow {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: #444;
+}
+
+.page-btn.active {
+  background-color: #ff7a00;
+  color: white;
+  border-color: #ff7a00;
+}
+
+.page-dots {
+  padding: 6px 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .history-pagination-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .history-pagination-controls {
+    justify-content: flex-start;
+  }
+}

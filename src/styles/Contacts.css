@@ -1,0 +1,225 @@
+.contacts-container {
+  padding: 24px;
+}
+
+.contacts-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.contacts-tabs button {
+  padding: 10px 18px;
+  background: #f2f2f2;
+  border: none;
+  border-radius: 8px;
+  margin-right: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contacts-tabs .active {
+  background-color: #ff6f00;
+  color: white;
+}
+
+.contacts-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.upload-btn,
+.add-btn {
+  background-color: white;
+  border: 1px solid #f3a45d;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.upload-btn > img {
+  width: 22px;
+  height: auto;
+}
+
+.add-btn {
+  background-color: #f97510;
+  color: white;
+}
+
+.contacts-table-wrap {
+  overflow-x: auto;
+}
+
+.contacts-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contacts-table-wrap th,
+.contacts-table-wrap td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-green {
+  color: green;
+  font-weight: 500;
+}
+
+.status-red {
+  color: red;
+  font-weight: 500;
+}
+
+.pagination-footer {
+  margin-top: 8px;
+  font-size: 13px;
+  color: gray;
+}
+
+/* Action Dropdown */
+.action-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.action-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 24px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 100px;
+}
+
+.dropdown-content button {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.dropdown-content button img {
+  width: 18px;
+  height: auto;
+  margin-right: 10px;
+}
+.dropdown-content .danger {
+  color: red;
+}
+.dropdown-content .danger img {
+  width: 18px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal input {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons .cancel {
+  background: white;
+  border: 1px solid #f97510;
+  color: #f97510;
+}
+
+.modal-buttons .save {
+  background: #f97510;
+  color: white;
+}
+
+.csv-note {
+  font-size: 12px;
+  color: #f97510;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+.lgocnaier > img {
+  margin-left: 5px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .contacts-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacts-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .contacts-table-wrap table {
+    font-size: 14px;
+  }
+
+  .modal {
+    width: 90%;
+  }
+  .contacts-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contacts-tabs > button {
+    font-size: 10px;
+  }
+}

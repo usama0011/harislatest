@@ -1,0 +1,67 @@
+/* Wrapping container to enable scroll */
+.overview-recent-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 20px;
+  overflow-x: auto; /* Enables horizontal scroll */
+}
+
+/* Table grid layout */
+.overview-table-header,
+.overview-table-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr 2fr 2fr 1fr;
+  min-width: 700px; /* Forces scroll if screen is smaller */
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* Sticky header (optional) */
+.overview-table-header {
+  font-weight: 600;
+  color: #222;
+  border-bottom: 2px solid #ddd;
+  background-color: #fff;
+}
+
+/* Status coloring */
+.status.successful {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.status.failed {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.status.pending {
+  color: #f0ad4e;
+  font-weight: 500;
+}
+
+.overview-ellipsis {
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .overview-recent-container {
+    padding: 16px;
+  }
+
+  .overview-recent-table {
+    padding: 8px 12px;
+  }
+
+  .overview-table-header,
+  .overview-table-row {
+    font-size: 13px;
+    min-width: 650px; /* Keeps structure when scrolled */
+  }
+}
