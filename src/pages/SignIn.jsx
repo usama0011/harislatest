@@ -49,7 +49,7 @@ const SignIn = () => {
         </div>
         <div className="signin-top-links">
           <span>Don't have an account?</span>
-          <Link to="signup">Sign up</Link>
+          <Link to="/signup">Sign up</Link>
         </div>
       </div>
 
