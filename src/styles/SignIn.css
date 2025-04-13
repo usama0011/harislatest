@@ -103,7 +103,12 @@
   margin: 0 auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
-
+.sallgirlIllustor {
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  width: 200px;
+}
 .signin-box h2 {
   font-size: 28px;
   text-align: center;
@@ -371,5 +376,11 @@
   }
   .signin-top-links > span {
     color: white !important;
+  }
+  .sallgirlIllustor {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    width: 160px;
   }
 }

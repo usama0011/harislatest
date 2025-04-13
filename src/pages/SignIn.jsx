@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input, Button, message } from "antd";
 import { EyeInvisibleOutlined, EyeTwoTone } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../utils/api";
 import GoogleIMG from "../assets/google.png";
 import "../styles/SignIn.css";
@@ -49,7 +49,7 @@ const SignIn = () => {
         </div>
         <div className="signin-top-links">
           <span>Don't have an account?</span>
-          <a href="/signup">Sign up</a>
+          <Link to="signup">Sign up</Link>
         </div>
       </div>
 
