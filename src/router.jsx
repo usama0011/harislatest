@@ -4,7 +4,6 @@ import LandingPage from "./pages/LandingPage";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
-import AdminLayout from "./components/layout/AdminLayout";
 import Overview from "./pages/dashboard/Overview";
 import Messages from "./pages/dashboard/Messages";
 import Contacts from "./pages/dashboard/Contacts";
@@ -16,6 +15,7 @@ import EnterOTP from "./pages/EnterOTP";
 import ResetNewPasswordScreen from "./pages/ResetNewPasswordScreen";
 import PaymentHistory from "./pages/dashboard/PaymentHistory";
 import RechargeBillPaymentHistory from "./pages/dashboard/RechargeBillPaymentHistory";
+import AdminLayout from "./components/Layout/AdminLayout";
 
 // Dummy authentication
 const isAuthenticated = () => !!localStorage.getItem("token");
