@@ -1,7 +1,7 @@
 // OverviewActivitySection.jsx
 import React from "react";
 import { Button } from "antd";
-import "../styles/Overview.css";
+import "../styles/OverView.css";
 import SendIcon from "../assets/Fram4.png";
 import UploadIcon from "../assets/upload.png";
 import EyeIcon from "../assets/Eye.png";
