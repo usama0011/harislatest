@@ -11,7 +11,7 @@ import SmallIllustorGirl from "../assets/loginillustor.png";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [tenantId, setTenantId] = useState("demo-tenant"); // Can also use from .env or context
+  const [tenantId] = useState(localStorage.getItem("x-tenant-id") || "");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -19,6 +19,13 @@ const SignIn = () => {
   const handleSignIn = async () => {
     setLoading(true);
     setErrorMessage("");
+
+    if (!email || !password) {
+      setErrorMessage("Please enter email and password");
+      setLoading(false);
+      return;
+    }
+
     try {
       const response = await api.post(
         "/auth/signin",
@@ -29,12 +36,19 @@ const SignIn = () => {
           },
         }
       );
+
       const token = response.data.token;
+
+      // ✅ Save token to localStorage
       localStorage.setItem("token", token);
+
+      // ✅ Show success toast
       message.success("Login successful!");
+
+      // ✅ Redirect to dashboard
       navigate("/dashboard");
     } catch (error) {
-      console.error(error);
+      console.error("Login error:", error);
       setErrorMessage("Incorrect email address or password");
     } finally {
       setLoading(false);

@@ -16,6 +16,7 @@ import ResetNewPasswordScreen from "./pages/ResetNewPasswordScreen";
 import PaymentHistory from "./pages/dashboard/PaymentHistory";
 import RechargeBillPaymentHistory from "./pages/dashboard/RechargeBillPaymentHistory";
 import AdminLayout from "./components/Layout/AdminLayout";
+import MessagesHistory from "./pages/dashboard/MessagesHistory";
 
 // Dummy authentication
 const isAuthenticated = () => !!localStorage.getItem("token");
@@ -43,6 +44,7 @@ const AppRouter = () => (
         element={<RechargeBillPaymentHistory />}
       />
       <Route path="paymenthistory" element={<PaymentHistory />} />
+      <Route path="messagehistory" element={<MessagesHistory />} />
       <Route path="delivery-report" element={<DeliveryReport />} />
       <Route path="payment" element={<Payment />} />
       <Route path="recharges-bills" element={<RechargesBills />} />

@@ -71,15 +71,22 @@
 }
 /* Fixed Logout */
 .sidebar-logout {
-  padding: 12px 24px;
-  border-top: 1px solid #f0f0f0;
   margin-top: auto;
+  padding: 0 24px 16px;
 }
-
+.sidebar-logout .ant-menu {
+  border: none;
+  background: transparent;
+}
 .sidebar-logout .ant-menu-item {
   color: #f44336 !important;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0 !important;
 }
+
 /* Header Layout */
 .admin-header {
   background-color: #fff;

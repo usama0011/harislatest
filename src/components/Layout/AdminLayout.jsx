@@ -119,6 +119,12 @@ const AdminLayout = () => {
     if (e.key === "logout") {
       console.log("Logging out...");
       // Optional: Clear token, reset state, etc.
+
+      // ✅ Remove only token
+      localStorage.removeItem("token");
+
+      // Optional: Redirect to login page or homepage
+      navigate("/signin");
     } else {
       navigate(`/dashboard/${e.key}`);
     }

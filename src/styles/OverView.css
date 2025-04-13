@@ -193,6 +193,12 @@
   font-weight: 500;
   color: #555;
 }
+.overview-type-select,
+.newselectwekly > select {
+  border: 1px solid gainsboro !important;
+  border-radius: 5px !important;
+  padding: 2px 5px;
+}
 
 .overview-topup-button {
   margin-top: 10px;
@@ -291,6 +297,7 @@
   .newselectwekly > select {
     margin-bottom: 10px;
     width: 100%;
+    border: 1px solid gainsboro;
   }
 }
 

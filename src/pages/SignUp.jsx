@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import "../styles/Signup.css";
+import { useNavigate } from "react-router-dom";
 import GoogleImage from "../assets/google.png";
 import EyeOpen from "../assets/eyeopen.png";
 import MaingWebBrand from "../assets/mainlogo.png";
-import BackgorundBnradSignup from "../assets/signupbrand.jpg";
 const SignUp = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -30,9 +33,11 @@ const SignUp = () => {
     symbol: /[!@#$%^&*(),.?":{}|<>]/.test(password),
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = {};
+
+    const pwdValid = validatePassword(form.password); // get criteria results
 
     if (!validateEmail(form.email)) {
       newErrors.email = "Incorrect email address format";
@@ -42,12 +47,57 @@ const SignUp = () => {
       newErrors.confirmPassword = "Passwords do not match";
     }
 
+    // ✅ Check password rules — if any false, block form submission
+    if (
+      !pwdValid.minLength ||
+      !pwdValid.upperCase ||
+      !pwdValid.number ||
+      !pwdValid.symbol
+    ) {
+      newErrors.password = "Password does not meet the required criteria";
+    }
+
     setErrors(newErrors);
     setShowValidation(true);
 
     if (Object.keys(newErrors).length === 0) {
-      // Perform sign up logic
-      console.log("Form submitted", form);
+      setLoading(true); // start loading
+
+      try {
+        const response = await fetch(
+          "http://54.243.4.152:3000/api/auth/signup",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              firstname: form.firstName,
+              lastname: form.lastName,
+              email: form.email,
+              mobileNumber: form.mobile,
+              password: form.password,
+              confirmPassword: form.confirmPassword,
+            }),
+          }
+        );
+
+        const data = await response.json();
+        setLoading(false); // stop loading
+
+        if (response.ok) {
+          console.log("Signup success", data);
+          localStorage.setItem("x-tenant-id", data.tenantId);
+          navigate("/signin"); // ✅ Redirect to login
+        } else {
+          alert(data.message || "Signup failed");
+        }
+      } catch (error) {
+        setLoading(false); // stop loading on error too
+
+        console.error("Signup error:", error);
+        alert("Something went wrong");
+      }
     }
   };
 
@@ -145,9 +195,10 @@ const SignUp = () => {
             </div>
           )}
 
-          <button className="signup-btn" type="submit">
-            Sign up
+          <button className="signup-btn" type="submit" disabled={loading}>
+            {loading ? "Signing up..." : "Sign up"}
           </button>
+
           <p className="signup-terms">
             By creating an account, I accept the <span>Terms & Conditions</span>{" "}
             of dejyle and confirm that I have read the{" "}
